@@ -15,10 +15,10 @@ export default function Card() {
       method: "GET",
       url: "https://spotify-downloader9.p.rapidapi.com/downloadSong",
       params: {
-        songId: `${URL}`, // Corrected template literal
+        songId: `${URL}`,
       },
       headers: {
-        "x-rapidapi-key": "88bfa7aa86msh037f2929f66feddp1b4247jsn6f626ecf1b78",
+        "x-rapidapi-key": process.env.REACT_API_KEY,
         "x-rapidapi-host": "spotify-downloader9.p.rapidapi.com",
       },
     };
@@ -37,15 +37,15 @@ export default function Card() {
       className="App m-5 p-1 flex items-center flex-col gap-x-2 justify-center
       rounded-3xl border-3 h-1/2 w-2/3 border-green-950 
       bg-[radial-gradient(circle_at_bottom_left,_var(--tw-gradient-stops))] from-gray-300 via-emerald-600 to-green-500"
- >
+    >
       <div className="flex items-center justify-center font-bold italic text-xl">
         <SlSocialSpotify size={30} />
         <p>Spotify Downloader !!</p>
       </div>
-      <div className="border-3 rounded-full m-1 p-1 shadow border-dark-green">
+      <div className=" m-1 p-1 ">
         <input
           type="url"
-          className="h-10 w-[500px] mr-3 bg-yellow-100 shadow-md outline-none border-none px-5 italic font-bold rounded-full"
+          className="h-10 w-[80%] mr-3  bg-yellow-100 shadow outline-none border-none px-5 italic font-bold rounded-full"
           value={URL}
           onChange={handleURL}
         />

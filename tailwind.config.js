@@ -9,6 +9,7 @@ module.exports = {
       },
       backgroundImage: {
         "gradient-black-green": "linear-gradient(to right, darkgreen, wheat)",
+        "gradient-red-black":"linear-gradient(to right, red, black)",
       },
     },
   },
